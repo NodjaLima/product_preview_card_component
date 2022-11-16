@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr) );
+  max-width: 480px;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+
+.desktop-image {
+  max-width: 240px;
+  border-radius: 10px 0 0 10px;
+}
+
+.mobile-image {
+  display: none;
+}
+
+.info{
+  padding: 23px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-product {
+  font-family: 'Montserrat';
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+  margin: 0px;
+}
+
+.info-title{
+  font-family: "Fraunces";
+  color: rgb(29, 29, 29);
+  line-height: 1;
+}
+
+.info-text{
+  font-family: 'Montserrat';
+  font-size: 12px;
+  color: hsl(228, 12%, 48%);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.price{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  }
+
+.price h2 {
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces";
+}
+
+.price p {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  font-size: 12px;
+  text-align: center;
+  font-family: 'Montserrat';
+}
+
+.button {
+  width: 100%;
+  background-color: hsl(158, 36%, 37%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  height: 40px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: hsl(212, 21%, 14%);
+}
+
+a {
+  text-decoration: none; 
+  color: hsl(0, 0%, 100%);
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  font-size: 12px;
+}
+
+@media(max-width: 450px) {
+  body {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    max-width: 375px;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+    width: 375px;
+    height: auto;
+    border-radius: 10px 10px 0 0px;
+  }
+  
+}
+
